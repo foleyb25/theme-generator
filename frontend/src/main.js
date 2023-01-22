@@ -29,7 +29,6 @@ const router = createRouter({
 })
 
 router.beforeEach( async (to, from) => {
-    await setTheme()
     await setMarkdown()
 })
 

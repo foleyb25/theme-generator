@@ -1,4 +1,5 @@
-const ThemeGenerator = require('./index')
+// const ThemeGenerator = require('./index')
+const ThemeGenerator = require('oai-theme-generator')
 const cors = require('cors')
 const express = require('express');
 const app = express();
