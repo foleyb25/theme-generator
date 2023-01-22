@@ -65,6 +65,7 @@ const five = getThemeData.value.colors.five
 }
 
 .theme-bg-five {
+  transition-duration: 0.4s;
   background-color: v-bind(five);
 }
 

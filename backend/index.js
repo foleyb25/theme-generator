@@ -7,7 +7,9 @@ module.exports = class ThemeGenerator {
 
     defaultOptions = {
         textCompletionPrompt: 'Human: Write me a prompt for Dalle2 art generator that is based on the 80s',
-        colorGenerationPrompt: 'Give me a color scheme representing the 1980s in the United States. give me the colors in Hex Values and give me 8 colors, the first 3 I can use for a background and the other 5 for styling'
+        colorGenerationPrompt: 'Human: Give me a color scheme representing the 1980s in the United States. give me the colors in Hex Values and give me 8 colors, the first 3 I can use for a background and the other 5 for styling'
+        // textCompletionPrompt: 'Human: Write me a prompt for Dalle2 art generator that is based on the emo punk rock phase of the early 2000s in the united states',
+        // colorGenerationPrompt: 'Human: Give me a color scheme representing the early 2000s emo punk rock phase in the United States. give me the colors in Hex Values and give me 8 colors, the first 3 I can use for a background and the other 5 for styling'
     }
 
     constructor(options) {

@@ -1,20 +1,17 @@
 <template>
     <div class="w-[80%] mt-8 mb-8 theme-bg-primary flex flex-col justify-center items-center shadow-2xl rounded-xl border border-black">
-      <button class="mt-9 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="generateTheme">Generate New Theme</button>
+      <button v-if="!isLoading" class="mt-9 theme-bg-four hover:bg-white text-black border border-black font-bold py-2 px-4 rounded" @click="generateTheme">Generate New Theme</button>
       <div v-if="isLoading">Loading...</div>
       <div v-if="getThemeData" class="flex flex-col justify-center items-center">
         <div id="art-container" class="mt-8 w-full h-48 flex flex-row justify-center">
-            <div id="relative=container" class="relative h-full w-full md:w-3/4 bg-blue-200 overflow-hidden">
-                <div class="text-[0.75rem] md:text-[1rem] top-8 left-8 absolute">Your Weekly Dose Of AI...</div>
+            <div id="relative=container" class="relative h-full w-full md:w-3/4 overflow-hidden">
+                <div class="text-[0.75rem] md:text-[1rem] top-8 left-8 absolute"></div>
                 <img class="absolute h-[90%] aspect[1/1] bottom-2 right-2 z-[4] border border-black rounded-2xl" :src="getThemeData.imageUrl" alt="">
                 <div id="dongle-two" class="absolute bottom-[10%] theme-bg-two right-0 w-[90%] m-4 h-1/2 border border-black rounded-xl">
                     <div id="dongle-one" class="absolute top-[10%] theme-bg-one right-0 w-[90%] h-3/4  border border-black rounded-xl">
                         <div id="dongle-three" class="absolute top-[10%] theme-bg-three right-0 w-[90%] h-3/4 border border-black rounded-xl"></div>
                     </div>
                 </div>
-                
-                
-                
             </div>
         </div>
         <div id="prompt-container" class="p-4 ">
