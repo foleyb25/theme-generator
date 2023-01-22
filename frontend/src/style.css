@@ -42,7 +42,7 @@
         @apply border;
         @apply rounded;
         @apply p-2;
-        @apply text-[1vw]
+        @apply text-[1.5vw]
     }
 
     ol {
@@ -58,7 +58,7 @@
     p {
         @apply p-2;
         @apply m-2;
-        @apply break-words;
+        @apply max-w-full;
     }
     /* ... */
   }

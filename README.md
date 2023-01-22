@@ -32,16 +32,12 @@ This project includes a VueJs frontend project and a node/express backend. The o
 and install the dependencies
 
 frontend:
-```
-cd frontend 
-npm install
-```
+```cd frontend ```
+```npm install ```
 
 backend:
-```
-cd backend (or if you are in the frontend directory run cd ../backend)
-npm install
-```
+```cd backend (or if you are in the frontend directory run cd ../backend)```
+```npm install```
 
 4. go to the [OpenAI developer site](https://beta.openai.com/overview) and create an account. Once your account is made, click on on your account profile in the top right and select "View API Keys".
 
@@ -51,10 +47,9 @@ npm install
 
 7. Inside the backend directory, Create a .env file and put in the following values
 
-```
-OPENAI_API_KEY=<YOUR_API_KEY_HERE>
-PORT=<PORT_OF_YOUR_CHOOSING>
-```
+
+```OPENAI_API_KEY=<YOUR_API_KEY_HERE>```
+```PORT=<PORT_OF_YOUR_CHOOSING>```
 
 I like to set my port to 8080 since this is the default when a fly.io's fly.toml gets generated. But this can be easily configured.
 
