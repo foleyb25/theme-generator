@@ -63,6 +63,5 @@ export const useThemeStore = new defineStore('themeStore', {
                 }
             }
         },
-        // Define getters that can retrieve information from the state here
     }
 })

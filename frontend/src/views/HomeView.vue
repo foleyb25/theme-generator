@@ -1,8 +1,18 @@
 <template>
     <div class="w-[80%] mt-8 mb-8 theme-bg-primary flex flex-col justify-center items-center shadow-2xl rounded-xl border border-black">
-      <button v-if="!isLoading" class="mt-9 theme-bg-four hover:bg-white text-black border border-black font-bold py-2 px-4 rounded" @click="generateTheme">Generate New Theme</button>
-      <div v-if="isLoading">Loading...</div>
-      <div v-if="getThemeData" class="flex flex-col justify-center items-center">
+        <div class="ml-4 font-bold text-[1.5rem] w-full flex flex-col items-center justify-center">
+            <h2>Theme Builder</h2>
+            <p class="text-[0.6rem]">powered by OpenAI</p>
+        </div>
+        <hr class="my-8 border-black w-4/5">
+        <div class="h-[20px]">
+            <button v-if="!isLoading" class="mt-9 theme-bg-four hover:bg-white text-black border border-black font-bold py-2 px-4 rounded" @click="generateTheme">Try It Out</button>
+            <div v-if="isLoading">Loading...</div>
+        </div>
+      <div v-if="getThemeData" class="flex flex-col justify-center items-center mt-24">
+        <div class="ml-4 font-bold text-[1.5rem] w-full flex flex-col items-start justify-start">
+            <h2>AI Generated Art</h2>
+        </div>
         <div id="art-container" class="mt-8 w-full h-48 flex flex-row justify-center">
             <div id="relative=container" class="relative h-full w-full md:w-3/4 overflow-hidden">
                 <div class="text-[0.75rem] md:text-[1rem] top-8 left-8 absolute"></div>
@@ -32,14 +42,22 @@
             <div class="theme-bg-five aspect-[1/1]"><div>05</div><div>{{ getThemeData.colors.five }}</div></div>
         </div>
       </div>
+      <hr class="my-8 border-black w-4/5">
+      <div v-if="getMarkdown" class="flex flex-col justify-center items-center mt-24 w-[90%] border rounded-2xl border-gray-300 p-8 bg-black text-gray-300">
+        <div class="w-full" v-html="getMarkdown"></div>
+    </div>
     </div>
 </template>
 
 <script setup>
 import {useThemeStore} from '../stores/theme.store'
+import {useMarkdownStore} from '../stores/markdown.store'
 import { storeToRefs } from "pinia";
 
 const themeStore = useThemeStore()
+const markdownStore = useMarkdownStore()
+
+const {getMarkdown} = storeToRefs(markdownStore)
 
 const {getThemeData, isLoading} = storeToRefs(themeStore)
 

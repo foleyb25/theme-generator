@@ -4,11 +4,17 @@ import App from './App.vue'
 import HomeView from './views/HomeView.vue'
 import { createPinia } from 'pinia'
 import { useThemeStore } from './stores/theme.store'
+import { useMarkdownStore } from './stores/markdown.store'
 import {createRouter, createWebHistory} from 'vue-router'
 
 const setTheme = async () => {
     const theme = useThemeStore()
     await theme.setTheme()
+}
+
+const setMarkdown = async () => {
+    const md = useMarkdownStore()
+    await md.setMarkdown()
 }
 
 const router = createRouter({
@@ -24,6 +30,7 @@ const router = createRouter({
 
 router.beforeEach( async (to, from) => {
     await setTheme()
+    await setMarkdown()
 })
 
 const pinia = createPinia()
