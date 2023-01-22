@@ -64,6 +64,9 @@ const markdownStore = useMarkdownStore()
 
 const {getMarkdown, getNPMMarkdown} = storeToRefs(markdownStore)
 
+console.log(getMarkdown)
+console.log(getNPMMarkdown)
+
 const {getThemeData, isLoading} = storeToRefs(themeStore)
 
 const {generateTheme} = themeStore

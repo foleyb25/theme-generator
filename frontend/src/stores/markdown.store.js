@@ -24,11 +24,11 @@ export const useMarkdownStore = new defineStore('markdownStore', {
             } else {
                 this.isMarkdownLoading = true
                 await axios.get('https://raw.githubusercontent.com/foleyb25/theme-generator/Main/README.md').then( (response) => {
-                    this.npmMarkdown = response.data
-                    this.isnpmMarkdownLoading = false
+                    this.markdown = response.data
+                    this.isMarkdownLoading = false
                 }).catch( (err) => {
-                    this.npmaMarkdownError = "Something went wrong retrieving theme from the server, using default theme: "+err
-                    this.isnpmMarkdownLoading = false
+                    this.markdownError = "Something went wrong retrieving theme from the server, using default theme: "+err
+                    this.isMarkdownLoading = false
                 })
             }
         },
@@ -39,11 +39,11 @@ export const useMarkdownStore = new defineStore('markdownStore', {
             } else {
                 this.isnpmMarkdownLoading = true
                 await axios.get('https://raw.githubusercontent.com/foleyb25/theme-generator-npm/main/README.md').then( (response) => {
-                    this.markdown = response.data
-                    this.isMarkdownLoading = false
+                    this.npmMarkdown = response.data
+                    this.isnpmMarkdownLoading = false
                 }).catch( (err) => {
                     this.markdownError = "Something went wrong retrieving theme from the server, using default theme: "+err
-                    this.isMarkdownLoading = false
+                    this.isnpmMarkdownLoading = false
                 })
             }
         },
@@ -58,7 +58,7 @@ export const useMarkdownStore = new defineStore('markdownStore', {
         },
 
         getNPMMarkdown() {
-            if(this.markdown) return DOMPurify.sanitize(marked.parse(this.markdown))
+            if(this.npmMarkdown) return DOMPurify.sanitize(marked.parse(this.npmMarkdown))
         },
     }
 })

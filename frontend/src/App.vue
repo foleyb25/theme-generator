@@ -2,7 +2,7 @@
   <img class="bg-img fixed bg-cover w-full h-full z-[-1]" :src="getThemeData.imageUrl">
   <nav class="theme-bg-secondary h-24 sticky w-full flex flex-row justify-between">
     <div id="logo" class="flex flex-row justify-center items-center w-1/4 ml-2">
-      <img src="/tb-logo.png"  class="max-h-[90%]" alt="">
+      <img src="/tg-logo.png"  class="max-h-[90%]" alt="">
     </div>
     <div id="links" class="w-1/4 flex flex-row justify-center items-center">
       <router-link to="/" class="theme-bg-four hover:bg-white text-black border-black border font-bold py-2 px-4 rounded">Home</router-link>

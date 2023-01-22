@@ -13,7 +13,7 @@ If you see any discrepencies in this document please reach out to me. discrepenc
 
 ## Overview
 
-Welcome to the Theme Generator application. This application is built to show a use case for the npm package, theme-builder. Please reference the [theme-builder documentation]() for more info.
+Welcome to the Theme Generator application. This application is built to show a use case for the npm package, oai-theme-generator. Please reference the [oai-theme-generator github](https://github.com/foleyb25/theme-generator-npm) for more info.
 
 This project includes a VueJs frontend and a node/express backend. The output build for the frontend is set inside the backend directory "/backend/dist". These build files are served once a user visits the home "/" route. Additional API endpoints are configured on the express server including retrieving the current theme, as well as generating a new one. 
 
@@ -29,16 +29,18 @@ This project includes a VueJs frontend and a node/express backend. The output bu
 
 ```cd theme-generator```
 
-and install the dependencies for the front end and backend
+and install the dependencies for the front end and backend:
 
 #### Frontend
+
 change directory:
 ```cd frontend ```
 and install frontend dependencies:
 ```npm install ```
 
 #### Backend:
-Repeat the same steps above for the backend
+
+Repeat the same steps above for the backend.
 
 4. go to the [OpenAI developer site](https://beta.openai.com/overview) and create an account. Once your account is made, click on on your account profile in the top right and select "View API Keys".
 
@@ -115,4 +117,4 @@ No, or at least not that I'm aware of. The OpenAI npm package uses CommonJS. Add
 
 ## Closing Remarks
 
-Again, if you see any discrepencies reach out!
+If you see any discrepencies reach out!
