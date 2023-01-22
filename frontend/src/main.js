@@ -30,6 +30,12 @@ const pinia = createPinia()
 
 const app = createApp(App).use(pinia).use(router)
 
-await setTheme()
+setTheme().then( (data) => {
+    app.mount('#app')
+}).catch((err) => {
+    console.log(err)
+})
 
-app.mount('#app')
+
+
+

@@ -31,6 +31,7 @@ export const useThemeStore = new defineStore('themeStore', {
             await axios.get('/api/theme/generate').then( (response) => {
                 this.isLoading = false
                 this.themeData = null
+                window.location.reload()
             }).catch( (err) => {
                 this.error = "Something went wrong retrieving theme from the server, using default theme: "+err
                 this.isLoading = false
