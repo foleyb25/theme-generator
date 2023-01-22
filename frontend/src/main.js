@@ -17,6 +17,11 @@ const setMarkdown = async () => {
     await md.setMarkdown()
 }
 
+const setNPMMarkdown = async () => {
+    const md = useMarkdownStore()
+    await md.setNPMMarkdown()
+}
+
 const router = createRouter({
     history: createWebHistory(),
     routes: [
@@ -30,6 +35,7 @@ const router = createRouter({
 
 router.beforeEach( async (to, from) => {
     await setMarkdown()
+    await setNPMMarkdown()
 })
 
 const pinia = createPinia()

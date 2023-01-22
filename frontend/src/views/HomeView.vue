@@ -46,6 +46,11 @@
       <div v-if="getMarkdown" class="flex flex-col justify-center items-center mt-24 w-[90%] border rounded-2xl border-gray-300 p-8 bg-black text-gray-300">
         <div class="w-full" v-html="getMarkdown"></div>
     </div>
+
+    <div v-if="getNPMMarkdown" class="flex flex-col justify-center items-center mt-24 mb-8 w-[90%] border rounded-2xl border-gray-300 p-8 bg-black text-gray-300">
+        <div class="w-full" v-html="getNPMMarkdown"></div>
+    </div>
+
     </div>
 </template>
 
@@ -57,7 +62,7 @@ import { storeToRefs } from "pinia";
 const themeStore = useThemeStore()
 const markdownStore = useMarkdownStore()
 
-const {getMarkdown} = storeToRefs(markdownStore)
+const {getMarkdown, getNPMMarkdown} = storeToRefs(markdownStore)
 
 const {getThemeData, isLoading} = storeToRefs(themeStore)
 
