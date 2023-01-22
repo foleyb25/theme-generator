@@ -6,15 +6,18 @@
     h1 {
       @apply text-[2em];
       @apply font-bold;
+      @apply my-4
     }
     h2 {
       @apply text-[1.5em];
       @apply font-bold;
+      @apply my-4
     }
 
     h3 {
         @apply text-[1.17em];
         @apply font-bold;
+        @apply my-4
     }
 
     h4 {
@@ -39,10 +42,8 @@
 
     code {
         @apply bg-gray-900;
-        @apply border;
         @apply rounded;
-        @apply p-2;
-        @apply text-[1.5vw]
+        @apply text-[1.8vw]
     }
 
     ol {
@@ -56,9 +57,8 @@
     }
 
     p {
-        @apply p-2;
-        @apply m-2;
-        @apply max-w-full;
+        @apply mx-2;
+        @apply block;
     }
     /* ... */
   }

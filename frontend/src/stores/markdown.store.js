@@ -19,7 +19,6 @@ export const useMarkdownStore = new defineStore('markdownStore', {
                 this.isLoading = true
                 await axios.get('https://raw.githubusercontent.com/foleyb25/theme-generator/Main/README.md').then( (response) => {
                     this.markdown = response.data
-                    console.log(this.markdown)
                     this.isMarkdownLoading = false
                 }).catch( (err) => {
                     this.markdownError = "Something went wrong retrieving theme from the server, using default theme: "+err

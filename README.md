@@ -15,7 +15,7 @@ If you see any discrepencies in this document please reach out to me. discrepenc
 
 Welcome to the Theme Generator application. This application is built to show a use case for the npm package, theme-builder. Please reference the [theme-builder documentation]() for more info.
 
-This project includes a VueJs frontend project and a node/express backend. The output build directory for the frontend is set inside the backend directory "/backend/dist". These build files are served once a user visits the home "/" route. Additional API endpoints are configured on the express server including retrieving the current them as well as generating a new one. 
+This project includes a VueJs frontend and a node/express backend. The output build for the frontend is set inside the backend directory "/backend/dist". These build files are served once a user visits the home "/" route. Additional API endpoints are configured on the express server including retrieving the current theme, as well as generating a new one. 
 
 ## Getting Started
 
@@ -25,23 +25,20 @@ This project includes a VueJs frontend project and a node/express backend. The o
 
 ```git clone git@github.com:foleyb25/theme-generator.git```
 
-3. cd into the directory 
+3. change into the directory 
 
 ```cd theme-generator```
 
-and install the dependencies
+and install the dependencies for the front end and backend
 
 #### Frontend
-change directory
+change directory:
 ```cd frontend ```
-install frontend dependencies
+and install frontend dependencies:
 ```npm install ```
 
 #### Backend:
-chnage directory
-```cd backend (or if you are in the frontend directory run cd ../backend)```
-install backend dependencies
-```npm install```
+Repeat the same steps above for the backend
 
 4. go to the [OpenAI developer site](https://beta.openai.com/overview) and create an account. Once your account is made, click on on your account profile in the top right and select "View API Keys".
 
@@ -49,30 +46,30 @@ install backend dependencies
 
 6. Open up theme-generator in your favorite IDE
 
-7. Inside the backend directory, Create a .env file and put in the following values
+7. Inside the backend directory, create a .env file and put in the following values
 
-OpenAPI key
+OpenAPI key:
 ```OPENAI_API_KEY=<YOUR_API_KEY_HERE>```
-server port number
+Server port number:
 ```PORT=<PORT_OF_YOUR_CHOOSING>```
 
-I like to set my port to 8080 since this is the default when a fly.io's fly.toml gets generated. But this can be easily configured.
+I like to set my port to 8080 since this is the default when I genrate a fly.toml, but this can be easily configured.
 
-8. Check your proxy port inside of vite.config.js. Make sure the target reads "http://localhost:<PORT_OF_YOUR_CHOOSING>" or the API calls won't work in development. This is not an issue in production since the Vuejs build is served from the backend host. For development, you'll need to specify this proxy.
+8. Check your proxy port inside of vite.config.js. Make sure the target reads "http://localhost:<PORT_OF_YOUR_CHOOSING>" or the API calls won't work in development. This is not an issue in production since the Vuejs build is served from the backend. For development, you'll need to specify this proxy.
 
 9. Open up two terminals and start the frontend and backend servers
 
-in the backend directory
+In the backend directory:
 ```npm run start:dev```
 
 The backend should be running on the server port of your choosing.
 
-in the frontend directory
+In the frontend directory:
 ```npm run start:dev```
 
 The frontend should be running on the default port of 5173.
 
-10. Visit your vueJS application in your browser by typing in the url, "localhost:5173" or what ever port your frontend is running on.
+10. Visit your vueJS application in your browser by typing in the url, "http://localhost:5173"
 
 ## State Management
 
@@ -92,7 +89,7 @@ Images generated are around 3.1 MB and they are pulled from an OpenAI server or 
 
 To fix this, the image could be downloaded and saved in a file server (preffered), or in your backend directory (just make sure to remove the old image or your project directory will get hefty). Once downloaded run the image through [image compression library](https://www.npmjs.com/package/imagemin) and save it.
 
-Please reach out to me for more info on this if you are curious. My email can be found on my [Github](https://github.com/foleyb25) or you can find me on [Linkedin](https://www.linkedin.com/in/brian-foley-456624196/)
+Please reach out to me for more info on this if you are curious. My contact information is at the top.
 
 ### Authorization error trying to load images after some time
 
@@ -102,9 +99,9 @@ Either way, the local file store will solve this issue.
 
 ### Issues applying styles to tailwind
 
-Trying to add theme color in the "hover:theme-color" directive doesn't work. Binding the class attribute and appending the string may work but this increases code complexity and readabiliity becomes difficult.
+Trying to add theme color in the "hover:theme-color" directive doesn't work. Binding the class attribute and appending the string may work but this increases code complexity and readability becomes difficult.
 
-As a rule of thumb - use Tailwind for the layout and use custom css classes for the theme data. You can define these in app.vue and omit the style "scope" specifier if present.
+As a rule of thumb - use Tailwind for the layout and use custom css classes for the theme data. You can define these in app.vue and omit the style "scope" specifier if present. This way they will be global throughout your Vue application
 
 ## Additional Resources
 
@@ -114,7 +111,7 @@ As a rule of thumb - use Tailwind for the layout and use custom css classes for 
 
 ### Q: Can I use the theme-generator package in my VueJS project and not have to implement a backend service?
 
-No, or at least not that I'm aware of. The openAI npm package uses CommonJS. Additionally, lll (Javascript) code examples on openAI specify NodeJS.
+No, or at least not that I'm aware of. The OpenAI npm package uses CommonJS. Additionally, all (Javascript) code examples on openAI specify NodeJS.
 
 ## Closing Remarks
 
