@@ -16,7 +16,7 @@
    
   <footer class="theme-bg-secondary h-48 w-full flex flex-row justify-between">
     <div id="logo" class="flex flex-row justify-center items-center w-1/4 ml-2">
-      <img src="/tb-logo.png"  class="max-h-[90%]" alt="">
+      <img src="/tg-logo.png"  class="max-h-[90%]" alt="">
     </div>
     <div id="links" class="w-1/4 flex flex-row justify-center items-center">
       <a href="#" class="theme-bg-four hover:bg-white text-black border-black border font-bold py-2 px-4 rounded">Back To Top</a>

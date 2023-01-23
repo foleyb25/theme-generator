@@ -1,7 +1,7 @@
 <template>
     <div class="w-[80%] mt-8 mb-8 theme-bg-primary flex flex-col justify-center items-center shadow-2xl rounded-xl border border-black">
         <div class="ml-4 font-bold text-[1.5rem] w-full flex flex-col items-center justify-center">
-            <h2>Theme Builder</h2>
+            <h2>Theme Generator</h2>
             <p class="text-[0.6rem]">powered by OpenAI</p>
         </div>
         <hr class="my-8 border-black w-4/5">
@@ -43,10 +43,14 @@
         </div>
       </div>
       <hr class="my-8 border-black w-4/5">
+      <h2>Application Documentation</h2>
+      <h4>code snippets are scrollable left to right</h4>
       <div v-if="getMarkdown" class="flex flex-col justify-center items-center mt-24 w-[90%] border rounded-2xl border-gray-300 p-8 bg-black text-gray-300">
         <div class="w-full" v-html="getMarkdown"></div>
     </div>
-
+    <hr class="my-8 border-black w-4/5">
+    <h2>oai-theme-generator Documentation</h2>
+    <h4>code snippets are scrollable left to right</h4>
     <div v-if="getNPMMarkdown" class="flex flex-col justify-center items-center mt-24 mb-8 w-[90%] border rounded-2xl border-gray-300 p-8 bg-black text-gray-300">
         <div class="w-full" v-html="getNPMMarkdown"></div>
     </div>

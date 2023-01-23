@@ -13,24 +13,8 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(express.static(path.join(__dirname, "./dist")));
 
-// const imageGenerationPrompt = 'Human: Write me a prompt for an AI art generator. Write a prompt that is based on the emo punk rock phase of the early 2000s era in the united states'
-// const colorGenerationPrompt = 'Human: Give me a color scheme representing the early 2000s era emo punk rock phase in the United States. give me the colors in Hex Values and give me 8 colors, the first 3 I can use for a background and the other 5 for styling'
-
-// const imageGenerationPrompt = 'Human: Write me a prompt for an AI art generator. Write a prompt that is based on the roaring 1920s era in the united states'
-// const colorGenerationPrompt = 'Human: Give me a color scheme representing the roaring 1920s era in the United States. give me the colors in Hex Values and give me 8 colors, the first 3 I can use for a background and the other 5 for styling'
-
-// const imageGenerationPrompt = 'Human: Write me a prompt for an AI art generator. Write a prompt that is based on the 1800s classical era in the europe'
-// const colorGenerationPrompt = 'Human: Give me a color scheme representing the 1800s classical era in Europe. give me the colors in Hex Values and give me 8 colors, the first 3 I can use for a background and the other 5 for styling'
-
-// const imageGenerationPrompt = 'Human: Write me a prompt for an AI art generator. Write a prompt that is based on woodstock music festival in 1969.'
-// const colorGenerationPrompt = 'Human: Give me a color scheme representing Woodstock music festival in 1969. give me the colors in Hex Values and give me 8 colors, the first 3 I can use for a background and the other 5 for styling'
-
-// const imageGenerationPrompt = 'Human: Write me a prompt for an AI art generator. Write a prompt that is based on the rise of the internet in the 1990s.'
-// const colorGenerationPrompt = 'Human: Give me a color scheme representing the rise of the internet in the 1990s. give me the colors in Hex Values and give me 8 colors, the first 3 I can use for a background and the other 5 for styling'
-
-const imageGenerationPrompt = 'Human: Write me a prompt for an AI art generator. Write a prompt that is based on prohibition and gangsters of chicago.'
-const colorGenerationPrompt = 'Human: Give me a color scheme representing prohibition and gangsters of chicago. give me the colors in Hex Values and give me 8 colors, the first 3 I can use for a background and the other 5 for styling'
-
+const imageGenerationPrompt = 'Human: Write me a prompt for An AI art generator. Generate a prompt that is based on the 1980s in the United States'
+const colorGenerationPrompt = 'Human: Give me a color scheme representing the 1980s in the United States. give me the colors in Hex Values and give me 8 colors, the first 3 I can use for a background and the other 5 for styling'
 
 const options = {
     openAIKey: process.env.OPENAI_API_KEY,
